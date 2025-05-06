@@ -34,10 +34,10 @@ pipeline {
         }
         
         stage('test') {
-            steps {
-                agent {
+            agent {
                     label 'linux'
-                 }
+            }
+            steps {
                 sh "echo testing"
             }
         }
