@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label : linux
+        label 'linux'
     }
 
     tools {
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh "mvn -Dmaven.test.failure.ignore=true -f api-gateway/ clean package"
             }
-                    
+                            
         }
         
         stage('archive') {
